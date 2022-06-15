@@ -1,0 +1,17 @@
+def is_valid(s)
+    valid_set = 
+    {
+        '('=>')',
+        '{'=>'}',
+        '['=>']'
+    }
+    
+    set = []
+    
+    s.each_char do |char|
+        set << char and next if valid_set[char]
+        return false if char != valid_set[set.pop]
+    end
+    
+    set.empty?
+end
