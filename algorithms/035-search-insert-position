@@ -1,0 +1,9 @@
+def search_insert(nums, target)
+    
+    nums.each_with_index do |num,index|
+      return index if num >= target
+    end
+    
+    nums.rindex(nums.last) + 1
+    
+end
