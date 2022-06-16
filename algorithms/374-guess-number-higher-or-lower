@@ -1,0 +1,23 @@
+# The guess API is already defined for you.
+# @param num, your guess
+# @return -1 if num is higher than the picked number
+#          1 if num is lower than the picked number
+#          otherwise return 0
+# def guess(num)
+
+def guessNumber(a=1,n)
+    
+    return n if a == n
+    
+    mid = (a+n)/2
+    
+    case guess(mid)
+    when -1
+         guessNumber(a,mid)
+    when 1
+         guessNumber(mid+1,n)
+    else 0
+        return mid
+    end
+    
+end

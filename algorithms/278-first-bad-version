@@ -1,0 +1,8 @@
+def first_bad_version(a=0,n)
+    
+    return n if a == n
+    
+    mid = (a+n)/2 
+    is_bad_version(mid) ? first_bad_version(a,mid) : first_bad_version(mid+1,n)
+    
+end
