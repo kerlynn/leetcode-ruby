@@ -1,0 +1,14 @@
+def smaller_numbers_than_current(nums)
+    
+    arranged_array = nums.sort
+    result = []
+    
+    nums.each do |num|
+    
+        result << arranged_array.find_index(num)
+    
+    end
+    
+    result
+    
+end
