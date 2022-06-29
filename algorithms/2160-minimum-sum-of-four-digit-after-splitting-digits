@@ -1,0 +1,9 @@
+# @param {Integer} num
+# @return {Integer}
+def minimum_sum(num)
+    
+  num = num.to_s.split('').sort
+    
+  return "#{num[0]}#{num[2]}".to_i + "#{num[1]}#{num[3]}".to_i
+    
+end
