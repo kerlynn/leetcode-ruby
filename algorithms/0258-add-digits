@@ -1,0 +1,12 @@
+# @param {Integer} num
+# @return {Integer}
+def add_digits(num)
+    
+    return 0 if num == 0
+    
+    nums = num.digits
+    result = nums.inject(0, :+)
+    
+    return add_digits(result) if result.to_s.length > 1
+    return result
+end
