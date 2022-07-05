@@ -1,0 +1,23 @@
+# @param {Integer[]} nums
+# @param {Integer} n
+# @return {Integer[]}
+def shuffle(nums, n)
+
+    count = nums.length/2
+    array = nums.each_slice(count).to_a
+
+    x = array[0]
+    y = array[1]
+
+    n = 0
+    shuffled = []
+
+    count.times{        
+        shuffled << x[n]
+        shuffled << y[n]
+        n+=1
+    }
+
+    return shuffled
+
+end
